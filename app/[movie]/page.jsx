@@ -6,12 +6,12 @@ export async function generateStaticParams() {
   )
   const res = await data.json()
 
-  return res.results.map((movie: any) => ({
+  return res.results.map((movie) => ({
     movie: toString(movie.id),
   }))
 }
 
-export default async function MovieDetail({ params }: any) {
+export default async function MovieDetail({ params }) {
   const { movie } = params
   const imagePath = 'https://image.tmdb.org/t/p/original'
   const data = await fetch(

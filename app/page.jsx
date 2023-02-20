@@ -1,4 +1,4 @@
-import Movie from '@/components/Movie'
+import Movie from '../components/Movie'
 
 export default async function Home() {
   const data = await fetch(
@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <main>
       <div className='grid gap-16 grid-cols-fluid'>
-        {res.results.map((movie: any) => (
+        {res.results.map((movie) => (
           <Movie
             key={movie.id}
             id={movie.id}
