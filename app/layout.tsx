@@ -19,7 +19,9 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className='font-montserrat'>{children}</body>
+      <body className={`${montserrat.className} mx-32 my-10 bg-black`}>
+        {children}
+      </body>
     </html>
   )
 }
